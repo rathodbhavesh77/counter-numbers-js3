@@ -1,0 +1,22 @@
+.button-container {
+    align-items: center;
+    margin-left: 38%;
+}
+
+.counter {
+    font-size: 60px;
+    margin-top: 20vh;
+    margin-left: 82vh;
+}
+
+.number {
+    font-size: 55px;
+    margin-left: 95vh;
+}
+
+.btn {
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    left: 50%;
+}

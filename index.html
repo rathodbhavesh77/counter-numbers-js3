@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice.Js3</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="counter">Counter</h1>
+        <div class="number">0</div>
+        <div class="button-container">
+            <button class="btn decrease">Decrease</button>
+            <button class="btn reset">Reset</button>
+            <button class="btn increase">Increase</button>
+        </div>
+    </div>
+    <script>
+        let count = 0;
+        //set initialize count
+        const value = document.querySelector(".number");
+        const buttons = document.querySelectorAll(".btn");
+        buttons.forEach(function(button) {
+            button.addEventListener("click", function(e) {
+                const styles = e.currentTarget.classList;
+                if (styles.contains("decrease")) {
+                    count--;
+                } else if (styles.contains("increase")) {
+                    count++;
+                } else {
+                    count = 0;
+                }
+                if (count > 0) {
+                    value.style.color = "green";
+                }
+                if (count < 0) {
+                    value.style.color = "red";
+                }
+                if (count === 0) {
+                    value.style.color = "#222";
+                }
+                value.textContent = count;
+            });
+        });
+    </script>
+</body>
+
+</html>
